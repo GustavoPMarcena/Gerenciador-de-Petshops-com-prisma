@@ -1,0 +1,25 @@
+{
+  "name": "gerenciador-de-petshops-com-prisma",
+  "version": "1.0.0",
+  "description": "API express com prisma para disciplina de PW1",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.5",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "prisma": "^6.1.0",
+    "typescript": "^5.7.2",
+    "uuid": "^11.0.4"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "tsx": "^4.19.2"
+  }
+}
