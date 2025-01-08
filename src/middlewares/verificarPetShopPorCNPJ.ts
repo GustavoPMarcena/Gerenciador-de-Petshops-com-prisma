@@ -1,14 +1,20 @@
 import { Request, Response, NextFunction } from 'express';
-import { petshops } from '../utils/data';
+import { PrismaClient } from "@prisma/client";
 
-export function verificarPetShopPorCNPJ(req: Request, res: Response, next: NextFunction) {
+const prisma = new PrismaClient();
+
+export const verificarPetShopPorCNPJ = async (req: Request, res: Response, next: NextFunction) => {
     const cnpj = req.body.cnpj;
-    const user = petshops.find(loja => loja.cnpj === cnpj);
+    const petshop = await prisma.petshop.findUnique({
+        where: {
+            cnpj: String(cnpj)
+        }
+    })
 
-    if (user) {
+    if (petshop != null) {
         res.status(400).json({ error: "PetShop já cadastrado." });
         return;
     }
-
+    
     next();
 }

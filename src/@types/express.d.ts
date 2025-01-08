@@ -6,13 +6,13 @@ type Pets = {
 	vaccinated:  boolean,   
 	deadline_vaccination: Date, 
 	created_at: Date
-  }
+}
   
 type PetShop = {
     id: string;
     name: string;
     cnpj: string;
-    pets: Pets[];
+    
 }
 
 declare namespace Express {
