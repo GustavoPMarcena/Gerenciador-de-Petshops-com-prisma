@@ -40,7 +40,7 @@ npx prisma migrate dev --name init
 npx prisma db push
 ```
 
-## ** Rodar o servidor**
+## **Rodar o servidor**
 
 ```bash
 npm run dev
